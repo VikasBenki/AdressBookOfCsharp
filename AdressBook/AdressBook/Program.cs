@@ -14,13 +14,12 @@ namespace AdressBook
             //Main  Method / program Entry Point
             static void Main(string[] args)
             {
-                //Showing Welcome Message On console.
-                Console.WriteLine("Welcome to Address Book Progam \n");
-
-                CreateAddressBook addressBook = new CreateAddressBook();
-                addressBook.AddContact();
-                Console.ReadLine();
-            }
+            //Showing Welcome Message On console.
+            Console.WriteLine("Welcome to Address Book Progam \n");
+            CreateAddressBook createAddressBook = new CreateAddressBook();
+            createAddressBook.ReadInput();
+            Console.ReadLine();
+        }
         
 
     }
