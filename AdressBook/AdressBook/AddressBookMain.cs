@@ -29,7 +29,7 @@ namespace AdressBook
                 }
             }
             else
-                Console.WriteLine("No Contacts in AddressBook");
+                Console.WriteLine("No Contacts in AddressBook \n");
         }
 
         //Method to Edit Contact 
@@ -54,39 +54,39 @@ namespace AdressBook
                     {
                         case 1:
                             data.lastName = Console.ReadLine();
-                            Console.WriteLine("Data updated successfully");
+                            Console.WriteLine("Data updated successfully \n");
                             break;
                         case 2:
                             data.address = Console.ReadLine();
-                            Console.WriteLine("Data updated successfully");
+                            Console.WriteLine("Data updated successfully \n");
                             break;
                         case 3:
                             data.city = Console.ReadLine();
-                            Console.WriteLine("Data updated successfully");
+                            Console.WriteLine("Data updated successfully \n");
                             break;
                         case 4:
                             data.state = Console.ReadLine();
-                            Console.WriteLine("Data updated successfully");
+                            Console.WriteLine("Data updated successfully \n");
                             break;
                         case 5:
                             data.zipCode = Convert.ToInt64(Console.ReadLine());
-                            Console.WriteLine("Data updated successfully");
+                            Console.WriteLine("Data updated successfully \n");
                             break;
                         case 6:
                             data.phoneNumber = Convert.ToInt64(Console.ReadLine());
-                            Console.WriteLine("Data updated successfully");
+                            Console.WriteLine("Data updated successfully \n");
                             break;
                         case 7:
                             data.email = Console.ReadLine();
-                            Console.WriteLine("Data updated successfully");
+                            Console.WriteLine("Data updated successfully \n");
                             break;
                         default:
-                            Console.WriteLine("Enter Valid Choice!");
+                            Console.WriteLine("Enter Valid Choice! \n");
                             break;
                     }
                 }
                 else
-                    Console.WriteLine("No Contact With this Name!");
+                    Console.WriteLine("No Contact With this Name! \n");
             }
         }
 
@@ -98,7 +98,7 @@ namespace AdressBook
                 if (ct.firstName.Equals(dName))
                 {
                     this.contactList.Remove(ct);
-                    Console.WriteLine("Contact Deleted!");
+                    Console.WriteLine("Contact Deleted! \n");
                     break;
                 }
             }
