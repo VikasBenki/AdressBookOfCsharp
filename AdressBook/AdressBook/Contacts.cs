@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace AdressBook
 {
     public class Contacts
-    { // variables
+    {  // variables
         public string firstName;
         public string lastName;
         public string address;
@@ -44,5 +44,7 @@ namespace AdressBook
         }
     }
 }
+
+
 
 
