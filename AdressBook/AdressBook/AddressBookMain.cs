@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace AdressBook
 {
     public class AddressBookMain
-    { 
-        
+    {
         //Collection Class
         private List<Contacts> contactList;
         private List<Contacts> cityList;
@@ -73,6 +72,14 @@ namespace AdressBook
             }
             else
                 Console.WriteLine("No Contacts in AddressBook \n");
+        }
+        //MEthod to Get Contacts
+        public List<Contacts> getContacts()
+        {
+            if (contactList.Count == 0)
+                return null;
+            else
+                return contactList;
         }
         //Method to Edit Contact 
         public void EditContact(string name)

@@ -9,6 +9,7 @@ namespace AdressBook
 {
     public class CreateAddressBook
     {
+        readonly string filePath = @"D:\VikasBenki\AdressBookOfCsharp\AdressBook\AdressBook\File\PersonData.txt";
         static AddressBookMain addressBookMain = new AddressBookMain();
         static Dictionary<string, AddressBookMain> addressBook = new Dictionary<string, AddressBookMain>();
         static Dictionary<string, List<Contacts>> cityDictionary = new Dictionary<string, List<Contacts>>();
@@ -34,6 +35,7 @@ namespace AdressBook
                 Console.WriteLine("10.Count person by city or state");
                 Console.WriteLine("11.Sort the Address book");
                 Console.WriteLine("12.Sort by state city or zip");
+                Console.WriteLine("13.Write and Read the Person detail using File IO");
                 Console.WriteLine("0.Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
@@ -45,7 +47,7 @@ namespace AdressBook
                         AddDetails(CreateAddressBook.BookName(addressBook), cityDictionary, stateDictionary);
                         break;
                     case 3:
-                        addressBookMain = CreateAddressBook.BookName(addressBook);
+                       // addressBookMain = CreateAddressBook.BookName(addressBook);
                         addressBookMain.DisplayContact();
                         break;
                     case 4:
@@ -93,6 +95,10 @@ namespace AdressBook
                     case 12:
                         //displaying the sorted records based on city,state,zipcode
                         AddressBookMain.SortData(cityDictionary);
+                        break;
+                    case 13:
+                        FileOperations.WriteInTextFile(addressBook, filePath);
+                        FileOperations.ReadFromTextFile(filePath);
                         break;
                     case 0:
                         CONTINUE = false;
@@ -152,11 +158,17 @@ namespace AdressBook
         /// <returns></returns>
         public static AddressBookMain BookName(Dictionary<string, AddressBookMain> addBook)
         {
-            addressBook = addBook;
-            Console.WriteLine("Enter address book name:");
-            string name = Console.ReadLine();
-            AddressBookMain address = addressBook[name];
-            return address;
+            
+                addressBook = addBook;
+                Console.WriteLine("Enter address book name:");
+                string name = Console.ReadLine();
+                AddressBookMain address = addressBook[name];
+                return address;                       
+                
+        }
+        public Dictionary<string, AddressBookMain> getAllAddressBook()
+        {
+            return addressBook;
         }
     }
 }
