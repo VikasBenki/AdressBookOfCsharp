@@ -1,2 +1,8 @@
-AddressBook Name:Guru
-Name:Vikas Benki Address:whatever City:Challakere State:Karnataka Zipcode:577543 Ph.No:855333 Email:vikas@gmaol
+AddressBook Name:Vikas
+Name:Vikki Benki
+ Address:Challakere 
+City:chitradurga 
+State:karnataka
+ Zipcode:577543
+ Ph.No:8660683485
+ Email:Vikasmsbenki@gmail.com
